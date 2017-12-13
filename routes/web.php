@@ -17,9 +17,15 @@ Route::get('/', function () {
 
 Auth::routes();
 
+/////////////////////////////////////////////////////////////////////////////////
 Route::get('/test', 'TestController@index');
 Route::get('/test/email', 'TestController@email');
 
+
+Route::get('/reminder', 'ReminderEmailController@store');
+
+
+///////////////////////////////////////////////////////////////////////////////////
 Route::get('/home', 'HomeController@index')->name('home');
 
 // 前台的路由
